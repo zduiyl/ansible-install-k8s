@@ -2,11 +2,7 @@
 # 如果部署单Master，只保留一个Master节点
 # 默认Naster节点也部署Node组件
 192.168.31.71 node_name=k8s-master1
-<<<<<<< HEAD
 #192.168.31.72 node_name=k8s-master2
-=======
-#192.168.31.74 node_name=k8s-master2
->>>>>>> c9279f55328d7a73c6a5970a1ce788ea2c9d47b5
 
 [node]
 192.168.31.72 node_name=k8s-node1
@@ -19,22 +15,12 @@
 
 [lb]
 # 如果部署单Master，该项忽略
-<<<<<<< HEAD
 192.168.31.71 lb_name=lb-master
 192.168.31.72 lb_name=lb-backup
-=======
-192.168.31.81 lb_name=lb-master
-192.168.31.82 lb_name=lb-backup
->>>>>>> c9279f55328d7a73c6a5970a1ce788ea2c9d47b5
 
 [k8s:children]
 master
 node
 
 [newnode]
-<<<<<<< HEAD
 #192.168.31.74 node_name=k8s-node3
-=======
-#192.168.31.75 node_name=k8s-node3
->>>>>>> c9279f55328d7a73c6a5970a1ce788ea2c9d47b5
-

@@ -1,22 +1,9 @@
-<<<<<<< HEAD
 {% set local_ip = inventory_hostname + ':' + '6443' %}
-=======
-{% if groups['master'] | length == 1 %}
-    {% set apiserver = groups['master'][0] %}
-{% elif groups['master'] | length > 1 %}
-    {% set apiserver = vip %}
-{% endif %}
-
->>>>>>> c9279f55328d7a73c6a5970a1ce788ea2c9d47b5
 apiVersion: v1
 clusters:
 - cluster:
     certificate-authority: {{ k8s_work_dir }}/ssl/ca.pem
-<<<<<<< HEAD
     server: https://{{ local_ip }}
-=======
-    server: https://{{ apiserver }}:6443
->>>>>>> c9279f55328d7a73c6a5970a1ce788ea2c9d47b5
   name: kubernetes
 contexts:
 - context:

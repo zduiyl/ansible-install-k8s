@@ -1,4 +1,4 @@
-# Kubernetes v1.20 企业级高可用集群自动部署（离线版）
+# Kubernetes v1.22 企业级高可用集群自动部署（离线版）
 >### 注：确保所有节点系统时间一致
 >### 操作系统要求：CentOS7.x_x64
 
@@ -62,9 +62,9 @@ cert_hosts:
 ```
 # kubectl get node
 NAME          STATUS   ROLES    AGE   VERSION
-k8s-master    Ready    <none>   9h    v1.20.4
-k8s-node1     Ready    <none>   9h    v1.20.4
-k8s-node2     Ready    <none>   9h    v1.20.4
+k8s-master1   Ready    <none>   9h    v1.22.4
+k8s-node1     Ready    <none>   9h    v1.22.4
+k8s-node2     Ready    <none>   9h    v1.22.4
 ```
 
 ## 6、其他

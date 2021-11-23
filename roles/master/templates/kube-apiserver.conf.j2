@@ -8,7 +8,7 @@ KUBE_APISERVER_OPTS="--logtostderr=false \
 --advertise-address={{ local_ip }} \
 --allow-privileged=true \
 --service-cluster-ip-range={{ service_cidr }} \
---enable-admission-plugins=NamespaceLifecycle,LimitRanger,ServiceAccount,ResourceQuota,NodeRestriction \
+--enable-admission-plugins=NodeRestriction \
 --authorization-mode=RBAC,Node \
 --enable-bootstrap-token-auth=true \
 --token-auth-file={{ k8s_work_dir }}/cfg/token.csv \
@@ -23,7 +23,7 @@ KUBE_APISERVER_OPTS="--logtostderr=false \
 --etcd-certfile={{ k8s_work_dir }}/ssl/etcd/server.pem \
 --etcd-keyfile={{ k8s_work_dir }}/ssl/etcd/server-key.pem \
 --service-account-issuer=api \
---service-account-signing-key-file={{ k8s_work_dir }}/ssl/server-key.pem \
+--service-account-signing-key-file={{ k8s_work_dir }}/ssl/ca-key.pem \
 --requestheader-client-ca-file={{ k8s_work_dir }}/ssl/ca.pem \
 --proxy-client-cert-file={{ k8s_work_dir }}/ssl/server.pem \
 --proxy-client-key-file={{ k8s_work_dir }}/ssl/server-key.pem \
